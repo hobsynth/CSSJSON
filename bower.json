@@ -1,11 +1,10 @@
 {
-  "name": "CSSJSON",
+  "name": "cssjson",
   "main": "cssjson.js",
-  "version": "2.1.0",
+  "version": "2.1.3",
   "homepage": "https://github.com/aramk/CSSJSON",
   "authors": [
-    "Aram Kocharyan https://github.com/aramk",
-    "Shoukath Mohammed https://github.com/Mohammed9531" 
+    "Aram Kocharyan https://github.com/aramk"
   ],
   "license": "MIT",
   "description": "Converts CSS to JSON and back.",
