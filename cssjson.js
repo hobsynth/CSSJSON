@@ -200,13 +200,24 @@ var CSSJSON = new function () {
         }
         if (node.children) {
             var first = true;
-            for (i in node.children) {
+            var process = (name,data)=>{
                 if (breaks && !first) {
                     cssString += '\n';
                 } else {
                     first = false;
                 }
-                cssString += strNode(i, node.children[i], depth);
+                cssString += strNode(name, data, depth);
+            }
+            if (node.children instanceof Array) {
+                for(var i=0; i<node.children.length; i++){
+                    for (var j in node.children[i]) {
+                        process(j,node.children[i][j])
+                    }
+                }
+            }else{
+                for (var i in node.children) {
+                    process(i,node.children[i])
+                }
             }
         }
         return cssString;
