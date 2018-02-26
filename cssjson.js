@@ -215,7 +215,7 @@
             }
             if (node.children) {
                 var first = true;
-                var process = (name,data)=>{
+                var process = function(name,data){
                     if (breaks && !first) {
                         cssString += '\n';
                     } else {
